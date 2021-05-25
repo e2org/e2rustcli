@@ -40,8 +40,8 @@ impl Args {
         let target = String::from(matches.value_of("TARGET").unwrap_or_else(|| ""));
 
         // Parse optional arguments:
-        let edit = matches.value_of("EDIT").map(|arg| String::from(arg));
-        let rename = matches.value_of("RENAME").map(|arg| String::from(arg));
+        let edit = matches.value_of("EDIT").map(String::from);
+        let rename = matches.value_of("RENAME").map(String::from);
         // arg.to_string() and String::from(arg) are equivalent, but String::from
         // better communicates intent (conversion from &str to String).
 
