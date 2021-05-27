@@ -37,7 +37,7 @@ impl fmt::Display for Args {
 impl Args {
     pub fn new(matches: clap::ArgMatches) -> Result<Args> {
         // Parse an argument with a default value (empty string):
-        let target = String::from(matches.value_of("TARGET").unwrap_or_else(|| ""));
+        let target = String::from(matches.value_of("TARGET").unwrap_or(""));
 
         // Parse optional arguments:
         let edit = matches.value_of("EDIT").map(String::from);
