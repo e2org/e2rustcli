@@ -19,13 +19,18 @@ fn main() {
             // to provide a default value.
 
             // Keyword arguments:
-            (@arg EDIT: -e --edit +takes_value "edit something")
-            (@arg RENAME: -r --rename +takes_value "rename something")
+            (@arg EDIT: -e --edit +takes_value
+             "edit something")
+            (@arg RENAME: -r --rename +takes_value
+             "rename something")
 
             // Boolean arguments (flags):
-            (@arg delete: -d --delete "delete something")
-            (@arg verbose: -v --verbose "log info + debug output to terminal")
-            (@arg quiet: -q --quiet "suppress all info + debug output")
+            (@arg delete: -d --delete
+             "delete something")
+            (@arg verbose: -v --verbose
+             "log info + debug output to terminal")
+            (@arg quiet: -q --quiet
+             "suppress all info + debug output")
         )
         // Args constructor accepts a clap::ArgMatches object:
         .get_matches(),
